@@ -1,0 +1,92 @@
+**KEY:**
+
+RED - Reduced to an existing row.<br>
+COM - Combined and averaged to a single row.<br>
+REM - Removed completely.<br>
+
+
+- **Compendium Large (515 rows):**
+    - Major headings selected:
+        - Bicycling
+        - Conditioning Exercise
+        - Dancing
+        - Running
+        - Walking
+        - Water Activities
+        - Winter Activities
+    - Removed races, competitions, and competetive activities
+
+- **Compendium Medium (250 rows):**
+    - Bicycling, RED
+    - Aerobics, RED
+    - Calisthenics, COM
+    - Circuit training, COM
+    - Resistance, COM
+    - Rowing, stationary, COM
+    - Basketball, RED
+    - Boxing, COM
+    - Yoga, RED
+    - Running, COM
+    - Horseback riding, COM
+    - Rock climbing, COM
+    - Roller blading, COM
+    - Tai chi, COM
+    - Tennis, RED
+    - Climbing hills, COM
+    - Walking, COM
+    - Nordic walking, COM
+    - Walking, treadmill,, COM
+    - Canoeing, RED
+    - Stand up Paddleboarding, RED
+    - Swimming, COM
+    - Water running, COM
+    - Aquatic cycling, COM
+    - Skating, ice, RED
+    - Skating Treadmill, COM
+    - Skiing, RED
+    - Snow shoeing REM
+    - Snowmobiling REM
+    - Snow shoveling REM
+    - Snow blower REM
+    - Rolerskiing, no incline, COM
+    - Rolerskiing, 2-5 degree incline, COM
+    - Rolerskiing, 6-10 degree incline, COM
+
+- **Compendium Small (96 rows):**
+    - Elliptical trainer, COM
+    - Health club exercise, REM
+    - Arm Ergometer, REM
+    - High intensity interval exercise, COM
+    - Skateboard, COM
+    - Scuba diving, COM
+    - Skindiving, scuba diving, REM
+    - Ski machine/ergometer, REM
+    - Pilates, COM
+    - Therapeutic exercise ball, COM
+    - Teaching exercise, REM
+    - Upper body exercise, COM
+    - Native New Zealander PA, REM
+    - Zumba, RED
+    - Golf, RED
+    - Frisbee, REM
+    - Football (American), touch, RED
+    - Football or baseball, playing catch, REM
+    - Dancing activities, REM
+    - Water activities, REM
+    - Winter activities, REM
+    - Walking, REM
+    - Jogging, RED
+    - Boxing, RED
+    - Martial Arts, REM
+    - Kendu, COM
+    - Track and field, REM
+    - Volleyball, COM
+    - Softball, COM
+    - Rodeo sports, REM
+    - Rope jumping, COM
+    - Race walking, REM
+    - Squash, COM
+    - Sports spectator, REM
+    - Softball or baseball, fast or slow pitch, REM
+    - Horse grooming, REM
+    - Motocross, REM
