@@ -174,4 +174,4 @@ cython_debug/
 .pypirc
 
 # Custom
-readme.html
+.zip

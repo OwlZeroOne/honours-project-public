@@ -1,4 +1,3 @@
-from parameters import *
 from schedule import *
 
 
@@ -40,7 +39,6 @@ class WeightLossDifference:
         :return: `float` - Absolute value of the difference between aspired weight and final weight.
         """
         final_w = self._final_weight()
-        # print("delta", self._ws, final_w)
         return round(abs(self._wt - final_w), 2)
 
     def _final_weight(self) -> float:
@@ -51,11 +49,8 @@ class WeightLossDifference:
         """
         current_weight = self._w0
         for i in range(self._P):
-            # print(f"Week {i + 1}")
             for day in self._schedule:
                 for exercise in day:
-                    # print("exercise", exercise.features())
-                    # print("curr_w", curr_w)
                     current_weight -= self._weight_loss(exercise, current_weight)
         return current_weight
 

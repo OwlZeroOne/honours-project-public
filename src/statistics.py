@@ -1,12 +1,7 @@
-import pandas as pd
-import matplotlib.pyplot as plt
-import numpy as np
-
-from chromosome import *
 from map_elites import *
 from schedule import Schedule
 
-class Results:
+class Statistics:
     """
     This class brings together the necessary results from the algorithm to either return to the user, or for statistical analysis.
     :var _schedules: `list[Schedule]` - List of schedule objects.
@@ -19,7 +14,7 @@ class Results:
         self._performances: np.ndarray = map_of_elites.performances()
         self._data_points: list[tuple[int]] = map_of_elites.data_points()
 
-    def statistics(self, detailed: bool = False) -> pd.DataFrame:
+    def summarise(self, detailed: bool = False) -> pd.DataFrame:
         """
         Gets all statistics from the algorithm's results as a `pandas` dataframe.
         :param detailed: `bool` - If `True`, statistics for all solutions will be returned. Otherwise, a summary of those statistics will be returned.
@@ -63,12 +58,6 @@ class Results:
                 index=["Performance", "Exercise Duration", "MET Value", "Exercises/Day"])
 
         return df
-
-    def schedules(self) -> list[Schedule]:
-        """
-        :return: The list of schedule objects.
-        """
-        return self._schedules
 
     # ===== MEAN =======================================================================================================
     def mean_quality(self) -> float:
@@ -175,14 +164,20 @@ class Results:
         """
         :return: The shortest duration of all best-performing schedules.
         """
-        lo = np.min(np.concatenate([schedule.durations().flatten() for schedule in self._schedules]))
+        durations_list = np.concatenate([schedule.durations().flatten() for schedule in self._schedules])
+        # Durations cannot be 0.
+        no_zeros = [x for x in durations_list if x != 0]
+        lo = np.min(no_zeros)
         return round(lo, 2)
 
     def min_met(self):
         """
         :return: The lowest MET Value of all best-performing schedules.
         """
-        lo = np.min(np.concatenate([schedule.mets().flatten() for schedule in self._schedules]))
+        mets_list = np.concatenate([schedule.mets().flatten() for schedule in self._schedules])
+        # MET Values cannot be 0.
+        no_zeros = [x for x in mets_list if x != 0]
+        lo = np.min(no_zeros)
         return round(lo, 2)
 
     def min_count(self):
@@ -199,10 +194,3 @@ class Results:
         :return: The number of yielded solutions.
         """
         return len(self._schedules)
-
-    def output(self) -> None:
-        """
-        Output results to a CSV file for further data analysis.
-        """
-        df: pd.DataFrame = self.statistics(True)
-        df.to_csv('output.csv', index=False)

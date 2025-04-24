@@ -29,7 +29,10 @@ class ExerciseRepository:
 
         return s
 
-    def show(self) -> pd.DataFrame:
+    def get(self):
+        return self._data_df
+
+    def show(self) -> None:
         """
         Prints the dictionaries within the list of raw data.
         """
@@ -55,8 +58,8 @@ class ExerciseRepository:
         greatest integer, while the lower bound is rounded to lowest integer.
         :return: A range from the lower bound to the upper bound, minus 1.
         """
-        l = [float(self.item_at(i)['met']) for i in range(self.size())]
-        return range(math.floor(min(l)), math.ceil(max(l)))
+        mets = list(self._data_df.T.loc['met'])
+        return range(math.floor(min(mets)), math.ceil(max(mets)))
 
     def _load(self, path: str) -> None:
         """

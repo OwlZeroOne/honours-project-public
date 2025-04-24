@@ -21,9 +21,8 @@ class Gene:
         :param config: `Config` - The configuration object from which settings are extracted.
         :param other: `Gene` - The gene object from which traits will be inherited.
         """
-        if other is not None:
-            if not (isinstance(other, Gene)):
-                raise TypeError(f"Improper input parameter type for `other`. Should be `Gene`. Got {type(other)}")
+        if not(other is None or isinstance(other, Gene)):
+            raise TypeError(f"Improper input parameter type for `other`. Should be `Gene`. Got {type(other)}")
 
         self._config = config
 
@@ -51,13 +50,18 @@ class Gene:
         """
         return rnd.choice(self._config.exercise_duration_range())
 
-    def _random_schedule(self) -> int:
+    @staticmethod
+    def _random_schedule() -> int:
         """
         :return: A random base-10 schedule within range (1-127).
         """
-        return rnd.choice(self._config.base10_schedule_range())
+        return rnd.choice(range(1,2**7))
 
-    def _schedule_to_week_days(self):
+    def _schedule_to_week_days(self) -> list[str]:
+        """
+        Convert the binary schedule representation to a list of days of the week when the exercise is to take place.
+        :return: List of days of the week when the exercise is to take place.
+        """
         base2_schedule = self.schedule_to_base(2)
         week = Defaults.WEEK
         schedule = []
@@ -90,13 +94,12 @@ class Gene:
         elif base == 10:
             return self._base10_schedule
         else:
-            raise ValueError(f"Unexpected number base! Expecting 2 for binary or 10 for decimal. Got {base}.")
+            raise ValueError(f"Unexpected number base! Expecting integers 2 for binary or 10 for decimal. Got {base}.")
 
     def exercise_days(self):
         """
         :return: A list of days of the week when the exercise takes place.
         """
-
         return self._schedule_to_week_days()
 
     def to_list(self) -> list[int]:
@@ -119,3 +122,10 @@ class Gene:
             self._base10_schedule = self._random_schedule()
         else:
             raise ValueError(f"Unexpected value of gene index ({param_index}).")
+
+    def frequency(self) -> int:
+        """
+        :return: The weekly frequency of an exercise, calculated by summing bits of its base-2 schedule representation.
+        """
+        base2_schedule = self.schedule_to_base(2)
+        return sum([int(bit) for bit in base2_schedule])

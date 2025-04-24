@@ -49,7 +49,6 @@ class CsvHandler:
                 return first_row is None
 
         except FileNotFoundError:
-            print("File not found.")
             return True
 
     def append(self, vals: list) -> None:

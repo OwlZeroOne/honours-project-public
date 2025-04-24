@@ -69,10 +69,3 @@ class Exercise(Gene):
         :return: The MET Value of the exercise.
         """
         return self._met
-
-    def frequency(self) -> int:
-        """
-        :return: The weekly frequency of an exercise, calculated by summing bits of its base-2 schedule representation.
-        """
-        base2_schedule = self.schedule_to_base(2)
-        return sum([int(bit) for bit in base2_schedule])

@@ -18,7 +18,7 @@ class Schedule(Chromosome):
 
     def __init__(self, chromosome: Chromosome, config: Config) -> None:
         """
-        he phenotypic representation of a chromosome. An object of this class will hold information regarding all the exercises contained within the schedule.
+        The phenotypic representation of a chromosome. An object of this class will hold information regarding all the exercises contained within the schedule.
         :param chromosome: `Chromosome` - The chromosome object to be inherited from.
         :param config: `Config` - The configuration object that holds necessary settings.
         """
@@ -27,11 +27,9 @@ class Schedule(Chromosome):
         self._base2_schedule: str = '0000000'
         self._exercises: list = []
         self._fitness = float('INF')
-        self._valid = False
 
         self._update()
 
-    # String overload
     def __str__(self) -> str:
         week = Defaults.WEEK
         s = ""
@@ -59,14 +57,10 @@ class Schedule(Chromosome):
     def _decode(self) -> None:
         """
         Decode the schedule to produce a list of phenotypic exercises.
-        :return:
         """
         exercises = []
         for gene in self.genotype_to_list('shallow'):
-            # print(gene)
             e = Exercise(gene, self._config)
-            # print(e)
-            # if e.is_valid():
             exercises.append(e)
         self._exercises = exercises
 
@@ -85,13 +79,6 @@ class Schedule(Chromosome):
                     raise ValueError(f"Unexpected value for weekly binary exercise schedule. Got {schedule[i]}.")
         self._schedule_as_list = week
 
-    def _evaluate(self) -> None:
-        """
-        Calculates the schedule's fitness value.
-        """
-        wld: float = WeightLossDifference(self._config, self._schedule_as_list).run()
-        self._fitness = wld
-
     def _merge_binary_schedules(self) -> None:
         """
         Merge exercise binary schedules into one.
@@ -105,8 +92,15 @@ class Schedule(Chromosome):
                     b2_total[i] = '1'
         self._base2_schedule = ''.join(b2_total)
 
+    def _evaluate(self) -> None:
+        """
+        Calculates the schedule's fitness value.
+        """
+        wld: float = WeightLossDifference(self._config, self._schedule_as_list).run()
+        self._fitness = wld
+
     @staticmethod
-    def _fill_and_return_matrix(lst: list[list], filler=0) -> np.ndarray:
+    def _fill_and_return_matrix(lst: list[list]) -> np.ndarray:
         """
         Generate an uneven 2D list to a complete Numpy 2D matrix by filling in blanks with a filler value.
         :param lst: `list[list` - The list to be filled.
@@ -118,12 +112,43 @@ class Schedule(Chromosome):
             row_length = len(lst[i])
             if row_length < max_row_length:
                 for _ in range(max_row_length - row_length):
-                    lst[i].append(filler)
+                    lst[i].append(0)
         return np.array(lst)
+
+    def _scale_features(self, raw_features: tuple) -> tuple:
+        """
+        Scale raw solution features to the number of bins in the map of elites in each dimension.
+        :param raw_features: `tuple` - A schedule's raw features.
+        :return: A new feature vector of scaled integers.
+        """
+        ranges = [self._config.repository().met_range(), self._config.daily_duration_range(), range(0, 8)]
+        b = self._config.bins()
+        scaled_features = [0] * len(raw_features)
+
+        for i in range(len(raw_features)):
+            rng: range = ranges[i]
+            r = raw_features[i]
+            r_min = rng.start
+            r_max = rng.stop
+
+            delta = (r_max + 1) - r_min
+            c = delta / b
+            s = int((r - r_min) / c) + 1
+
+            scaled_features[i] = s
+
+        return tuple(scaled_features)
 
     # ==================================================================================================================
     #       PUBLIC METHODS
     # ==================================================================================================================
+    def mutate(self):
+        """
+        Invoke parent `mutate()` method and update phenotypic properties.
+        """
+        super().mutate()
+        self._update()
+
     def prettify(self) -> None:
         """
         Pretty-print the schedule, illustrating exercises for each day of the week.
@@ -142,9 +167,6 @@ class Schedule(Chromosome):
 
             s += "-------------------------------------------------\n"
         print(s)
-
-    def is_valid(self) -> bool:
-        return self._valid
 
     def schedule_to_base(self, base: int) -> str | int:
         """
@@ -177,11 +199,17 @@ class Schedule(Chromosome):
         else:
             raise ValueError(f"Unexpected depth! Expecting 'shallow' or 'deep'. Got {depth}.")
 
-    # ===== MEASURABLES ================================================================================================
+
+    def exercises(self) -> list[Exercise]:
+        """
+        :return: The list of exercise phenotypes.
+        """
+        return self._exercises
+    # ===== METRICS ================================================================================================
     def mets(self) -> np.ndarray:
         """
         Gets MET values of all exercises within the schedule, organised into their respective days of the week.
-        :return: `2darray` - All MET value occurrences.
+        :return: `ndarray` - All MET value occurrences.
         """
         arr = []
         schedule = self._schedule_as_list
@@ -207,7 +235,6 @@ class Schedule(Chromosome):
         return self._fill_and_return_matrix(arr)
 
     def frequencies(self) -> np.ndarray:
-        # pass
         """
         Get frequencies of all exercises within the schedule and organise them into a computable `numpy` matrix.
         :return: `ndarray` - All exercise frequencies.
@@ -230,26 +257,20 @@ class Schedule(Chromosome):
             arr[i] = len(day)
         return arr
 
-    # ===== MEASURABLES ================================================================================================
-
     def features(self) -> tuple:
         """
-        Describe the schedule's features by calculating the mean MET value, mean exercise durations, and mean frequencies to a tuple.
-        :return: The tuple of respective descriptor values.
+        :return: The schedule's feature vector of average MET Values, Durations, and Frequencies, all scaled to the
+        map's size.
         """
         mean_mets: float = np.mean(self.mets())
         mean_durations: float = np.mean(self.durations())
         mean_frequencies: int = np.mean(self.frequencies())
-        return mean_mets, mean_durations, mean_frequencies
+
+        return self._scale_features((mean_mets, mean_durations, mean_frequencies))
 
     def fitness(self) -> float:
         """
         :return: The schedule's fitness score.
         """
         return self._fitness
-
-    def exercises(self) -> list[Exercise]:
-        """
-        :return: The list of exercise phenotypes.
-        """
-        return self._exercises
+    # ===== METRICS ================================================================================================

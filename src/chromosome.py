@@ -13,7 +13,7 @@ class Chromosome:
     :var _add_rate: `float` - The addition sub-mutation rate of the chromosome.
     :var _delete_rate: `float` - The deletion sub-mutation rate of the chromosome.
     :var _chromosome: `list[Gene]` - The chromosome as a list of gene objects.
-    :var _probability_pool: `list[int]` - A pool of 100 integers of 3 different possibilities, derived by each of the sub-mutation rates.
+    :var _mutation_pool: `list[int]` - A pool of 100 integers of 3 different possibilities, derived by each of the sub-mutation rates.
     """
 
     def __init__(self, config: Config, other=None) -> None:
@@ -23,8 +23,7 @@ class Chromosome:
         :param config: `Config` - The configurations object that holds the necessary settings.
         :param other: `Chromosome | None` - If provided, this instance will inherit properties of the `other` chromosome instance. Otherwise, new properties are generated.
         """
-        if other is not None:
-            if not isinstance(other, Chromosome):
+        if not (other is None or isinstance(other, Chromosome)):
                 raise TypeError("Improper input parameter type for `other`. Should be `Chromosome`")
 
         self._config: Config = config
@@ -36,12 +35,14 @@ class Chromosome:
 
         self._chromosome: list[Gene] = self._generate(5) if other is None else other.genotype_to_list('shallow')
 
-        self._probability_pool: list[int] = (
+        self._mutation_pool: list[int] = (
                 [0] * int(self._alter_rate * 100)
                 + [1] * int(self._add_rate * 100)
                 + [2] * int(self._delete_rate * 100)
         )
-        self._shuffle_probability_pool(5)
+
+        if not other is None:
+            del other
 
     def __str__(self) -> str:
         """
@@ -49,24 +50,16 @@ class Chromosome:
         """
         return str(self.genotype_to_list('deep'))
 
-    def _shuffle_probability_pool(self, times: int) -> None:
-        """
-        Shuffle the probability pool to obtain more randomness.
-        :param times: `int` - The amount of times the pool is to be shuffled.
-        """
-        for i in range(times):
-            rnd.shuffle(self._probability_pool)
-
     def _generate(self, size: int) -> list[Gene]:
         """
         Generate a random list of genes that will be denoted by the chromosome.
         :param size: `int` - The initial chromosome size.
         :return: `list[Gene]` - Random list of genes.
         """
-        l = []
-        for _ in range(size):
-            l.append(Gene(self._config))
-        return l
+        return [Gene(self._config) for _ in range(size)]
+        # for _ in range(size):
+        #     l.append(Gene(self._config))
+        # return l
 
     def _alter(self) -> None:
         """
@@ -96,29 +89,29 @@ class Chromosome:
         if size > 1:
             self._chromosome.remove(gene)
 
+    def mutate(self) -> None:
+        """
+        Conducts genetic mutation over the individual based on mutation rates specified
+        in the configurations.
+        """
+        chance = rnd.randrange(0, 100) / 100
+        if chance <= self._mutation_rate:
+            mutation_index = rnd.choice(self._mutation_pool)
+            if mutation_index == 0:
+                self._alter()
+            elif mutation_index == 1:
+                self._add()
+            elif mutation_index == 2:
+                self._delete()
+            else:
+                raise ValueError(
+                    f"Invalid mutation choice. Got {mutation_index} where element of {set(self._mutation_pool)} was expected")
+
     def size(self) -> int:
         """
         :return: The size of the individual in terms of number of genes/exercises.
         """
         return len(self._chromosome)
-
-    def mutate(self) -> None:
-        """
-        Conducts genetic mutation over the individual based on muation rates specified
-        in the configurations.
-        """
-        chance = rnd.randrange(0, 100) / 100
-        if chance <= self._mutation_rate:
-            sub_mutation_index = rnd.choice(self._probability_pool)
-            if sub_mutation_index == 0:
-                self._alter()
-            elif sub_mutation_index == 1:
-                self._add()
-            elif sub_mutation_index == 2:
-                self._delete()
-            else:
-                raise ValueError(
-                    f"Invalid mutation choice. Got {sub_mutation_index} where element of {set(self._probability_pool)} was expected")
 
     def genotype_to_list(self, depth: str = 'shallow') -> list[Gene] | list[list[int]]:
         """
