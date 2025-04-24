@@ -1,0 +1,97 @@
+idx,name,met,tags
+0,"Bicycling, general",7,Bicycling
+1,"Aerobic, general",7.3,Conditioning Exercise
+2,Calisthenics,4.4,Conditioning Exercise
+3,"Cicuit training, general",5.5,Conditioning Exercise
+4,"Elliptical trainer, general",7,Conditioning Exercise
+5,"Resistance, general",4.97,Conditioning Exercise
+6,Kettle bell swings,9.8,Conditioning Exercise
+7,"Stair treadmill ergometer, general",9.3,Conditioning Exercise
+8,"Rope skipping exercise, general",11,Conditioning Exercise
+9,"Jumping rope, Digi-Jump Maching, 120 jumps/minute",9,Conditioning Exercise
+10,"Rowing, stationary, general",8.96,Conditioning Exercise
+11,"Shuttle running, forward/backward/lateral",11,Conditioning Exercise
+12,"Slide board exercise, general",10.5,Conditioning Exercise
+13,"Slimnastics, jazzercise",6,Conditioning Exercise
+14,"Stretching, mild",2.3,Conditioning Exercise
+15,"Pilates, general",2.3,Conditioning Exercise
+16,"Pound, combination of Pilates and body movements with drumming",8.5,Conditioning Exercise
+17,"Pole dancing, exercise class",4.5,Conditioning Exercise
+18,Therapeutic exercise ball,6.15,Conditioning Exercise
+19,Upper body exercise,3.55,Conditioning Exercise
+20,"Water aerobics, water calisthenics, water exercise",5.3,Conditioning Exercise
+21,"Whirlpool, sitting",1.3,Conditioning Exercise
+22,"Yoga, General",2.3,Conditioning Exercise
+23,High intensity interval exercise,9,Conditioning Exercise
+24,"Balance Exercise Assist Robot (BEAR), simulated skiing, tennis, rodeo",2.3,Conditioning Exercise
+25,Hooping (formerly known as hula-hooping),5.8,Conditioning Exercise
+26,"Impulse Training System, Inertial Exercise Trainer",9,Conditioning Exercise
+27,"Virtual Reality Fitness,  Supernatural 'Flow' , 'Boxing' vigorous intensity",7.9,Conditioning Exercise
+28,"Zumba, group class",6.5,Conditioning Exercise
+29,Jog/walk combination (jogging component of less than 10 minutes),6,Running
+30,"Jogging, general",7.5,Running
+31,"Running, general",11.69,Running
+32,"Skipping, 5.5-6.0 mph",11.5,Running
+33,Archery,4.3,Sports
+34,"Badminton, social singles and doubles, general",5.5,Sports
+35,"Basketball, general",7.5,Sports
+36,Bowling,3,Sports
+37,"Boxing, general",8.28,Sports
+38,Broomball,7,Sports
+39,"Children's games, adults playing  (e.g., hopscotch, 4-square, dodge ball, playground apparatus, t-ball,  tetherball, marbles, jacks, arcade games), moderate effort",5.8,Sports
+40,"Coaching, actively playing sport with players",8,Sports
+41,"Cricket, batting, bowling, fielding",4.8,Sports
+42,Croquet,3.3,Sports
+43,Curling,4,Sports
+44,"Darts, wall or lawn",2.5,Sports
+45,Futsal,7.8,Sports
+46,"Fencing, general",6,Sports
+47,Floorball,10.5,Sports
+48,"American Football, touch, flag, general",8,Sports
+49,"Golf, general",4.5,Sports
+50,"Gymnastics, general",3.8,Sports
+51,Hacky sack,4,Sports
+52,"Handball, general",12,Sports
+53,"High ropes course, multiple elements",4,Sports
+54,Hang gliding,3.5,Sports
+55,"Hockey, field",7.8,Sports
+56,"Hockey, ice, general",8,Sports
+57,"Horseback riding, general",5.67,Sports
+58,"Horse cart, driving, standing or sitting",1.8,Sports
+59,"Horseshoe pitching, quoits",3,Sports
+60,Jai alai,12,Sports
+61,"Taekwondo, combat simulation",14.3,Sports
+62,Judo,11.3,Sports
+63,Juggling,4,Sports
+64,"Kendu, general",9.13,Sports
+65,Kickball,7,Sports
+66,Kung Fu Gymnastics,5.5,Sports
+67,Kickboxing,7.3,Sports
+68,Lacrosse,8,Sports
+69,"Lawn bowling, bocce ball, outdoor",3.3,Sports
+70,Netball,7,Sports
+71,Orienteering,9,Sports
+72,"Paddleball, casual, general",6,Sports
+73,"Paragliding, moderate altitude",1.8,Sports
+74,Prusik climbing,6.5,Sports
+75,"Polo, on horseback",8,Sports
+76,"Racquetball, general",7,Sports
+77,Rock climbing,8.3,Sports
+78,"Rope jumping, general",10.6,Sports
+79,"Rugby, touch, non-competitive",6.3,Sports
+80,Shuffleboard,3,Sports
+81,"Skateboarding, general, moderate effort",5,Sports
+82,"Skating, roller",7,Sports
+83,Roller blading,11.28,Sports
+84,"Skateboard, general",8.53,Sports
+85,"Skydiving, base-jumping, bungee jumping",3.5,Sports
+86,"Soccer, casual, general",7,Sports
+87,Walking football/soccer,3.5,Sports
+88,"Softball, general",4.67,Sports
+89,"Squash, general",9.65,Sports
+90,"Table tennis, ping pong",4,Sports
+91,"Tai chi, general",3.6,Sports
+92,"Tennis, general",6.8,Sports
+93,"Trampoline, recreational",6.3,Sports
+94,"Volleyball, general",5.5,Sports
+95,"Wallyball, general",7,Sports

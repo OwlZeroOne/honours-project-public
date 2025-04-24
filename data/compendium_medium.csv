@@ -1,0 +1,251 @@
+idx,name,met,tags
+0,"Bicycling, general",7,Bicycling
+1,"Aerobic, general",7.3,Conditioning Exercise
+2,Calisthenics,4.4,Conditioning Exercise
+3,"Cicuit training, general",5.5,Conditioning Exercise
+4,"Elliptical trainer, moderate effort",5,Conditioning Exercise
+5,"Elliptical trainer, vigorous effort",9,Conditioning Exercise
+6,"Resistance, general",4.97,Conditioning Exercise
+7,Kettle bell swings,9.8,Conditioning Exercise
+8,"Health club exercise, general",5.5,Conditioning Exercise
+9,"Health club exercise classes general, gym/weight training combined in one visit",5,Conditioning Exercise
+10,"Health club exercise, conditioning classes",7.8,Conditioning Exercise
+11,"Stair treadmill ergometer, general",9.3,Conditioning Exercise
+12,"Rope skipping exercise, general",11,Conditioning Exercise
+13,"Jumping rope, Digi-Jump Maching, 120 jumps/minute",9,Conditioning Exercise
+14,"Rowing, stationary, general",8.96,Conditioning Exercise
+15,"Shuttle running, forward/backward/lateral",11,Conditioning Exercise
+16,"Ski machine, general",6.8,Conditioning Exercise
+17,"Ski ergometer, cross country, double poling, slow to moderate speed",10.5,Conditioning Exercise
+18,"Ski ergometer, cross country, double poling, fast to maximum speed",18,Conditioning Exercise
+19,"Slide board exercise, general",10.5,Conditioning Exercise
+20,"Slimnastics, jazzercise",6,Conditioning Exercise
+21,"Stretching, mild",2.3,Conditioning Exercise
+22,"Pilates, traditional, mat",1.8,Conditioning Exercise
+23,"Pilates, general",2.8,Conditioning Exercise
+24,"Pound, combination of Pilates and body movements with drumming",8.5,Conditioning Exercise
+25,"Pole dancing, exercise class",4.5,Conditioning Exercise
+26,"Teaching exercise classes (e.g., aerobic, water)",6.8,Conditioning Exercise
+27,"Therapeutic exercise ball, Fitball exercise",2.8,Conditioning Exercise
+28,"Therapeutic exercise ball, Fitball exercise, high intensity",9.5,Conditioning Exercise
+29,"Upper body exercise, arm ergometer, general, light",2.8,Conditioning Exercise
+30,"Arm Ergometer, hand bike, 15W",2,Conditioning Exercise
+31,"Arm Ergometer, hand bike, 25-30W",2.8,Conditioning Exercise
+32,"Arm Ergometer, hand bike, 45W",3.5,Conditioning Exercise
+33,"Upper body exercise, stationary bicycle - Airdyne (arms only) 40 rpm, moderate intensity",4.3,Conditioning Exercise
+34,"Water aerobics, water calisthenics, water exercise",5.3,Conditioning Exercise
+35,"Whirlpool, sitting",1.3,Conditioning Exercise
+36,"Yoga, General",2.3,Conditioning Exercise
+37,"Native New Zealander PA, (e.g., Haka Powhiri, Poi, Moteatea, etc.), general moderate effort",5.3,Conditioning Exercise
+38,"Native New Zealander PA, general, vigorous effort",6.8,Conditioning Exercise
+39,"High intensity interval exercise, moderate effort",7,Conditioning Exercise
+40,"High intensity interval exercise,  burpees, mountain climbers, squat jumps, Tabata, vigorous effort",11,Conditioning Exercise
+41,"Balance Exercise Assist Robot (BEAR), simulated skiing, tennis, rodeo",2.3,Conditioning Exercise
+42,Hooping (formerly known as hula-hooping),5.8,Conditioning Exercise
+43,"Impulse Training System, Inertial Exercise Trainer",9,Conditioning Exercise
+44,"Virtual Reality Fitness,  Supernatural 'Flow' , 'Boxing' vigorous intensity",7.9,Conditioning Exercise
+45,"Zumba, group class",6.5,Conditioning Exercise
+46,"Zumba, home video",5.5,Conditioning Exercise
+47,"Afro-Cuban salsa (Cuban cha-cha-cha, mambo, Afro rumba, contratiempo son steps, orisha/santo movements)",6,Dancing
+48,"Ballet, modern, or jazz general, rehearsal or class",5,Dancing
+49,"Ballet exercises (plie, tendus, jetes, rond de Jambes, fondus, grand battement, grand adage, sautes, temp Leve's)",6.3,Dancing
+50,"Ballet, modern, or jazz, performance, vigorous effort",6.8,Dancing
+51,Tap,4.8,Dancing
+52,"Ethnic or cultural dancing (e.g. Greek, Middle Eastern, hula, salsa, merengue, bamba y plena,  flamenco, belly, and swing)",4.5,Dancing
+53,"Chinese square dance, Ballet & Tibetan dance",5.5,Dancing
+54,"Chinese square dance, aerobic dance",7.3,Dancing
+55,"Ballroom dancing, fast",5.5,Dancing
+56,"Folk dancing, moderate effort",5,Dancing
+57,"Anishinaabe Jingle dancing, brisk pace, other traditional American Indian dancing performed by women, moderate effort",5.5,Dancing
+58,"Caribbean dance (Abakua, Beguine, Bellair, Bongo, Brukin's, Caribbean Quadrills, Dinki  Mini, Gere, Gumbay, Ibo, Jonkonnu, Kumina,  Oreisha, Jambu)",3.5,Dancing
+59,Flamenco dance,8.5,Dancing
+60,"Jazz dancing, general",4.5,Dancing
+61,"Musical Theater, Singing/dancing",10.3,Dancing
+62,"Polynesian dance, Hawaiian hula slow, Maori haka, Tongan",5.8,Dancing
+63,"Polynesian dance, Hawaiian hula fast, Samoan sasa, Fijian style fast, Filipino Tinikling",7,Dancing
+64,"Polynesian dance, Samoan slap, Tahitian",8.8,Dancing
+65,"Salsa Dancing, with partner",4.8,Dancing
+66,"Salsa dancing, to a video",6.3,Dancing
+67,"Square Dancing, American Western, country",5.5,Dancing
+68,Jog/walk combination (jogging component of less than 10 minutes),6,Running
+69,"Jogging, general, self-selected pace",7.5,Running
+70,"Jogging, in place",4.8,Running
+71,Jogging 2.6 to 3.7 mph,3.3,Running
+72,Jogging on a mini-tramp,4.5,Running
+73,"Running, general",11.69,Running
+74,"Skipping, 5.5-6.0 mph",11.5,Running
+75,Archery,4.3,Sports
+76,"Badminton, social singles and doubles, general",5.5,Sports
+77,"Basketball, general",7.5,Sports
+78,Bowling,3,Sports
+79,"Boxing, general",8.28,Sports
+80,"Boxing, simulated boxing round, exercise",9.3,Sports
+81,Broomball,7,Sports
+82,"Children's games, adults playing  (e.g., hopscotch, 4-square, dodge ball, playground apparatus, t-ball,  tetherball, marbles, jacks, arcade games), moderate effort",5.8,Sports
+83,"Coaching, actively playing sport with players",8,Sports
+84,"Cricket, batting, bowling, fielding",4.8,Sports
+85,Croquet,3.3,Sports
+86,Curling,4,Sports
+87,"Darts, wall or lawn",2.5,Sports
+88,Futsal,7.8,Sports
+89,"Fencing, general",6,Sports
+90,Floorball,10.5,Sports
+91,"Football, touch, flag, general",8,Sports
+92,"Football, touch, flag, light effort",4,Sports
+93,"Football or baseball, playing catch",2.5,Sports
+94,"Frisbee playing, general",3,Sports
+95,"Frisbee, ultimate",8,Sports
+96,Frisbee golf,3.8,Sports
+97,"Golf, general",4.5,Sports
+98,"Golf, walking, carrying clubs",4.3,Sports
+99,"Golf, miniature, driving range",3.5,Sports
+100,"Golf, walking, pulling clubs",4.5,Sports
+101,"Golf, using power cart",3.5,Sports
+102,"Gymnastics, general",3.8,Sports
+103,Hacky sack,4,Sports
+104,"Handball, general",12,Sports
+105,"High ropes course, multiple elements",4,Sports
+106,Hang gliding,3.5,Sports
+107,"Hockey, field",7.8,Sports
+108,"Hockey, ice, general",8,Sports
+109,"Horseback riding, general",5.5,Sports
+110,"Horse grooming, maintenance, saddling tasks",4.5,Sports
+111,"Horseback riding, general",5.67,Sports
+112,"Horse cart, driving, standing or sitting",1.8,Sports
+113,"Horseshoe pitching, quoits",3,Sports
+114,Jai alai,12,Sports
+115,"Martial Arts, different types, slower pace, novice performers, practice",5.3,Sports
+116,"Martial Arts, different types, moderate pace (e.g., judo, jujitsu, karate, kick boxing, tae kwon do, tai-bo, Muay Thai boxing)",10.3,Sports
+117,"Taekwondo, combat simulation",14.3,Sports
+118,Judo,11.3,Sports
+119,Juggling,4,Sports
+120,"Kendu, kihon-keiko style, moderate intensity",6.5,Sports
+121,"Kendu, kirikaeshi style, high intensity",9.6,Sports
+122,"Kendu, kakari keiko style, very high intensity",11.3,Sports
+123,Kickball,7,Sports
+124,Kung Fu Gymnastics,5.5,Sports
+125,Kickboxing,7.3,Sports
+126,Lacrosse,8,Sports
+127,"Lawn bowling, bocce ball, outdoor",3.3,Sports
+128,"Motocross, off-road motor sports, all-terrain vehicle, general",4,Sports
+129,Netball,7,Sports
+130,Orienteering,9,Sports
+131,"Paddleball, casual, general",6,Sports
+132,"Paragliding, moderate altitude",1.8,Sports
+133,Prusik climbing,6.5,Sports
+134,"Polo, on horseback",8,Sports
+135,"Race Walking, 3.1 m/s (6.9 mph)",10.3,Sports
+136,"Race Walking, 3.7 m/s (8.3 mph)",13.8,Sports
+137,"Race Walking, racing speed, 4.0 m/s (8.95 mph)",15.5,Sports
+138,"Racquetball, general",7,Sports
+139,Rock climbing,8.3,Sports
+140,"Rock climbing, rappelling,",5,Sports
+141,"Rodeo sports, general, light effort",4,Sports
+142,"Rodeo sports, general, moderate effort",5.5,Sports
+143,"Rodeo sports, general, vigorous effort",7,Sports
+144,"Rope jumping, fast pace, 120-160 skips/min",12.3,Sports
+145,"Rope jumping, moderate pace, general, 100 to 120 skips/min, 2 foot skip, plain bounce",11.8,Sports
+146,"Rope jumping, slow pace, < 100 skips/min, 2 foot skip, rhythm bounce",8.3,Sports
+147,"Rope jumping, double under or more",10,Sports
+148,"Rugby, touch, non-competitive",6.3,Sports
+149,Shuffleboard,3,Sports
+150,"Skateboarding, general, moderate effort",5,Sports
+151,"Skating, roller",7,Sports
+152,Roller blading,11.28,Sports
+153,"Skateboard, longboard, 13.3 km/h, slow speed",6.8,Sports
+154,"Skateboard, longboard, 16.2 km/h, typical speed",8.3,Sports
+155,"Skateboard, longboard, 18.4 km/h, fast speed",10.5,Sports
+156,"Skydiving, base-jumping, bungee jumping",3.5,Sports
+157,"Soccer, casual, general",7,Sports
+158,Walking football/soccer,3.5,Sports
+159,"Softball or baseball, fast or slow pitch, general, moderate effort",5,Sports
+160,"Softball, practice",4,Sports
+161,"Softball, officiating",4,Sports
+162,"Softball, pitching",6,Sports
+163,"Sports spectator, very excited, emotional, physically moving",3.3,Sports
+164,Squash,12,Sports
+165,"Squash, general",7.3,Sports
+166,"Table tennis, ping pong",4,Sports
+167,"Tai chi, general",3.6,Sports
+168,"Tennis, general",6.8,Sports
+169,"Trampoline, recreational",6.3,Sports
+170,"Volleyball, non-competitive, 6 - 9 member team, general",3,Sports
+171,"Volleyball, beach, in sand",8,Sports
+172,"Wallyball, general",7,Sports
+173,"Track and field (e.g., shot, discus, hammer throw)",4,Sports
+174,"Track and field (e.g., high jump, long jump, triple jump, javelin, pole vault)",6,Sports
+175,"Track and field (e.g., steeplechase, hurdles)",10,Sports
+176,"Climbing hills, general",8.68,Walking
+177,"Hiking, cross country",6,Walking
+178,"Hiking slowly or ambling through fields and hillsides, no load",3.8,Walking
+179,"Hiking or walking at a normal pace through fields and hillsides, no load",5.3,Walking
+180,"Marching, moderate speed, military, no pack",4.5,Walking
+181,"Marching rapidly, military, no pack",8,Walking
+182,Race walking,6.5,Walking
+183,"Stair climbing, general",6.8,Walking
+184,"Stair climbing, slow pace",4.5,Walking
+185,"Stair climbing, fast pace, one step at a time",9.3,Walking
+186,"Stair climbing, two steps at a time",7.5,Walking
+187,"Stair climbing, ascending and descending stairs",7.5,Walking
+188,"Walking, general",4.53,Walking
+189,Nordic walking,8.33,Walking
+190,"Walking, backward, 3.5 mph, level",6,Walking
+191,"Walking, backward, 3.5 mph, uphill, 5% grade",7.8,Walking
+192,"Walking, treadmill, general",4.78,Walking
+193,"Boating, power, driving",2.5,Water Activities
+194,"Boating, power, passenger, light",1.3,Water Activities
+195,"Canoeing, rowing, for pleasure, general",3.5,Water Activities
+196,"Diving, springboard or platform",3,Water Activities
+197,"Kayaking, moderate effort",5,Water Activities
+198,"Kayaking, slalom, flat water",9,Water Activities
+199,Paddle boat,4,Water Activities
+200,"Rowing, simulated crew in a water tank, single oar, 33 strokes/min,",15.5,Water Activities
+201,"Rowing, single scull, ergometer, ergometer on slides, racing speed (32+ strokes/min, >10 mph)",15.5,Water Activities
+202,"Sailing, boat and board sailing, windsurfing, ice sailing, general",3,Water Activities
+203,"Sailing, Sunfish/Laser/Hobby Cat, Keel boats, ocean sailing, yachting, leisure",3.3,Water Activities
+204,"Sailing, dingy",2,Water Activities
+205,"Skiing, water or wake boarding",6,Water Activities
+206,"Jet skiing, driving, in water",7,Water Activities
+207,"Skindiving, fast",15.8,Water Activities
+208,"Skindiving, moderate",11.8,Water Activities
+209,"Skindiving, scuba diving, general",7,Water Activities
+210,"Scuba diving, general, light effort",5.3,Water Activities
+211,"Scuba diving, general, moderate effort",5.8,Water Activities
+212,"Scuba diving, professional diver",5.5,Water Activities
+213,"Scuba diving, recreational diver",6.8,Water Activities
+214,Snorkeling,5,Water Activities
+215,"Surfing, body or board, general",3,Water Activities
+216,"Surfboard, paddling",6.8,Water Activities
+217,"Stand up paddle boarding, general",6.5,Water Activities
+218,"Swimming, general",8.27,Water Activities
+219,"Tubing, floating on a river, general",2.3,Water Activities
+220,"Water aerobics, water calisthenics, general",5.5,Water Activities
+221,"Water aerobics, resistance exercises",3.8,Water Activities
+222,"Water aerobics, high intensity",7.5,Water Activities
+223,Water polo,10,Water Activities
+224,Water volleyball,3,Water Activities
+225,"Water jogging, vigorous effort",9.8,Water Activities
+226,"Water walking, light effort, slow pace",2.5,Water Activities
+227,"Water walking, moderate effort, moderate pace",4.8,Water Activities
+228,"Water walking, vigorous effort, brisk pace",6.8,Water Activities
+229,"Whitewater rafting, kayaking, or canoeing",5,Water Activities
+230,"Water running, general",8.08,Water Activities
+231,"Windsurfing, not pumping for speed",5,Water Activities
+232,"Windsurfing or kitesurfing, crossing trial",11,Water Activities
+233,"Aquatic cycling, general",6.13,Water Activities
+234,"Dog sledding, mushing",7.5,Winter Activities
+235,"Dog sledding, passenger",2.5,Winter Activities
+236,"Moving icehouse, set up/drill holes",6,Winter Activities
+237,Ice fishing,2,Winter Activities
+238,"Skating, ice, general",7,Winter Activities
+239,"Skating Treadmill, general",10.13,Winter Activities
+240,"Ski jumping, climb up carrying skis",7,Winter Activities
+241,"Skiing, general",7,Winter Activities
+242,"Sledding, tobogganing, bobsledding, luge",7,Winter Activities
+243,"Snowboarding, recreational, moderate pace, mountain",7.5,Winter Activities
+244,"Skiing, roller, elite racers",12.5,Winter Activities
+245,"Rollerskiing, no incline",9.22,Winter Activities
+246,"Rollerskiing, 2-5 degree incline",13.4,Winter Activities
+247,"Rollerskiing, 6-10 degree incline",14.15,Winter Activities
+248,"Mountaineering, downhill climbing, walking down with rope",9,Winter Activities
+249,"Mountaineering, downhill climbing/cross-country skiing",10.3,Winter Activities
